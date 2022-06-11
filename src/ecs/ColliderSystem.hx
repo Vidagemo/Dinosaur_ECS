@@ -72,7 +72,7 @@ class ColliderSystem {
         var heightLimit = (c1.attachee.height+c2.attachee.height)/2;
         var hitc1 = new Vector2(center2.x-center1.x, center2.y-center1.y);
         if ((Math.abs(hitc1.x) <= widthLimit) && (Math.abs(hitc1.y) <= heightLimit)){
-            
+             
             return true;
         }
         return false;
