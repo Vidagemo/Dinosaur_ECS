@@ -72,12 +72,7 @@ class ColliderSystem {
         var heightLimit = (c1.attachee.height+c2.attachee.height)/2;
         var hitc1 = new Vector2(center2.x-center1.x, center2.y-center1.y);
         if ((Math.abs(hitc1.x) <= widthLimit) && (Math.abs(hitc1.y) <= heightLimit)){
-            c1hittedWay = new Vector2(center2.x - center1.x, center2.y - center1.y);
-            c2hittedWay = new Vector2(center1.x - center2.x, center1.y - center2.y);
-            var c1theta = new Vector2(c1hittedWay.x/widthLimit, c1hittedWay.y/heightLimit);
-            var c2theta = new Vector2(c2hittedWay.x/widthLimit, c2hittedWay.y/heightLimit);
-            c1.touchSide(c1theta);
-            c2.touchSide(c2theta);
+            
             return true;
         }
         return false;
