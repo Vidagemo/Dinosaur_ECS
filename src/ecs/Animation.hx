@@ -16,7 +16,6 @@ class Animation extends Component {
     public function new(attachee:Entity, ?animFrame : Array<h2d.Tile>, ?asepriteFrame:Array<AsepriteFrame>, parent:h2d.Object, width:Float, height:Float) {
         super(attachee);//connect Entity
         type = "Animation";//set component type
-        
         this.animFrame = animFrame;
         if (animFrame != null){
             for (i in 0...animFrame.length)animFrame[i] = animFrame[i].center();

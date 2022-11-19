@@ -52,7 +52,6 @@ class Dinosaur extends Entity {
                 physical.velocity.x = 10;
             } 
         }else physical.velocity.x = 0;
-        
         if (!Key.isDown(Key.A) && !Key.isDown(Key.D))animation.changeAnim(air);
         else if (animation.anim.frames != walk)animation.changeAnim(walk);
         if (collider.collidedWith.length == 0){
